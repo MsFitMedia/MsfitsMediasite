@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>MS.FITS MEDIA | Creative Strategy, Branding &amp; Social-First Marketing</title>
+  <meta name="description" content="MS.FITS MEDIA is an independent creative agency building distinctive brands, compelling stories and social-first campaigns through creative thinking and purposeful strategy.">
+  <meta name="theme-color" content="#1D4845">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MS.FITS MEDIA | Creatives at heart. Strategic by design.">
+  <meta property="og:description" content="Branding, content, campaigns and social-first ideas, built on purposeful strategy.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Favicon: the logo as inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect x='14' y='14' width='172' height='172' rx='38' fill='%231D4845'/%3E%3Ctext x='92' y='133' text-anchor='middle' letter-spacing='-4' font-family='Georgia,serif' font-style='italic' font-size='82' fill='%23F4EFDF'%3EMS%3C/text%3E%3Ccircle cx='156' cy='129' r='5.5' fill='%23F4EFDF'/%3E%3Cpath transform='translate(166 68) scale(.6)' fill='%23EAA18E' d='M0 -26 L1.22 -2.96 L9.19 -9.19 L2.96 -1.22 L26 0 L2.96 1.22 L9.19 9.19 L1.22 2.96 L0 26 L-1.22 2.96 L-9.19 9.19 L-2.96 1.22 L-26 0 L-2.96 -1.22 L-9.19 -9.19 L-1.22 -2.96Z'/%3E%3C/svg%3E">
+
+  <!-- Type: Archivo (variable width: condensed display + body), DM Mono (labels),
+       Bodoni Moda italic (only for the "M" in the logo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Flags: JS is on; and whether the cover animation should play (once per visit)
+    (function (d) {
+      d.classList.add('js');
+
+      // Always open at the top (on the cover/hero), even on reload:
+      // don't restore the last scroll position, and drop any #section left in the address
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      var seen = false;
+      try { seen = sessionStorage.getItem('msfits-intro') === '1'; } catch (e) {}
+      // The cover plays once per visit; with reduced motion it's a short, gentle fade instead
+      if (!seen) d.classList.add('intro');
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== Logo sprite (MS. logo) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="logo" viewBox="0 0 200 200">
+      <rect x="14" y="14" width="172" height="172" rx="38" fill="#1D4845"/>
+      <text x="92" y="133" text-anchor="middle" letter-spacing="-4" font-family="'Bodoni Moda', Didot, Georgia, serif" font-style="italic" font-size="82" font-weight="500" style="font-variation-settings:'opsz' 28" fill="#F4EFDF">MS</text>
+      <circle cx="156" cy="129" r="5.5" fill="#F4EFDF"/>
+      <path transform="translate(166 68) scale(.6)" fill="#EAA18E" d="M0 -26 L1.22 -2.96 L9.19 -9.19 L2.96 -1.22 L26 0 L2.96 1.22 L9.19 9.19 L1.22 2.96 L0 26 L-1.22 2.96 L-9.19 9.19 L-2.96 1.22 L-26 0 L-2.96 -1.22 L-9.19 -9.19 L-1.22 -2.96Z"/>
+    </symbol>
+    <symbol id="spark" viewBox="-26 -26 52 52">
+      <path d="M0 -26 L1.22 -2.96 L9.19 -9.19 L2.96 -1.22 L26 0 L2.96 1.22 L9.19 9.19 L1.22 2.96 L0 26 L-1.22 2.96 L-9.19 9.19 L-2.96 1.22 L-26 0 L-2.96 -1.22 L-9.19 -9.19 L-1.22 -2.96Z"/>
+    </symbol>
+  </svg>
+
+  <!-- =========================================================
+       COVER / PRELOADER
+       The logo assembles piece by piece, the camera dives into the
+       sparkle, and the cover slides away. Plays once per visit.
+       ========================================================= -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading MS.FITS MEDIA">
+    <svg class="preloader__mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+      <rect class="pc pc--tile" x="14" y="14" width="172" height="172" rx="38" fill="#1D4845"/>
+      <text class="pc pc--m" x="92" y="133" text-anchor="middle" letter-spacing="-4" font-family="'Bodoni Moda', Didot, Georgia, serif" font-style="italic" font-size="82" font-weight="500" style="font-variation-settings:'opsz' 28" fill="#F4EFDF">MS</text>
+      <circle class="pc pc--dot" cx="156" cy="129" r="5.5" fill="#F4EFDF"/>
+      <g transform="translate(166 68) scale(.6)">
+        <path class="pc pc--spark" fill="#EAA18E" d="M0 -26 L1.22 -2.96 L9.19 -9.19 L2.96 -1.22 L26 0 L2.96 1.22 L9.19 9.19 L1.22 2.96 L0 26 L-1.22 2.96 L-9.19 9.19 L-2.96 1.22 L-26 0 L-2.96 -1.22 L-9.19 -9.19 L-1.22 -2.96Z"/>
+      </g>
+    </svg>
+    <p class="preloader__copy">brewing big ideas &amp; bigger strategies…</p>
+    <div class="preloader__flood" aria-hidden="true"></div>
+  </div>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#main" aria-label="MS.FITS MEDIA, back to top">
+      <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+      <span class="brand__name" aria-hidden="true">MS.FITS MEDIA</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menu</button>
+      <div class="nav-panel" id="nav-panel">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">What we do</a></li>
+          <li><a href="#approach">How we work</a></li>
+        </ul>
+        <a class="btn btn--accent btn--small" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         HERO — scroll-driven on desktop: the giant phone settles,
+         the scraps fly in, then the headline lands.
+         ========================================================= -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__stage">
+
+        <p class="hero__kicker mono">Strategy <span aria-hidden="true">→</span> Story <span aria-hidden="true">→</span> Social</p>
+        <p class="hero__hint mono" aria-hidden="true">Scroll ↓</p>
+
+        <!-- Phone with a looping "feed" of brand posts (decorative) -->
+        <div class="phone" aria-hidden="true">
+          <div class="phone__screen">
+            <div class="phone__bar">
+              <svg><use href="#logo"/></svg>
+              <b>MS.FITS MEDIA</b>
+              <span>•••</span>
+            </div>
+            <div class="feed">
+              <div class="feed__track">
+                <div class="post post--cream"><span>Creatives<br>at heart.</span></div>
+                <div class="post post--photo"><img src="assets/images/hero.webp" alt="" width="1062" height="855"></div>
+                <div class="post post--dark"><svg><use href="#spark"/></svg><span>Strategy-led.</span></div>
+                <div class="post post--paper"><span>Story-<br>driven.</span></div>
+                <div class="post post--accent"><span>Social-<br>first ✦</span></div>
+                <!-- duplicate set for a seamless loop -->
+                <div class="post post--cream"><span>Creatives<br>at heart.</span></div>
+                <div class="post post--photo"><img src="assets/images/hero.webp" alt="" width="1062" height="855"></div>
+                <div class="post post--dark"><svg><use href="#spark"/></svg><span>Strategy-led.</span></div>
+                <div class="post post--paper"><span>Story-<br>driven.</span></div>
+                <div class="post post--accent"><span>Social-<br>first ✦</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scraps: draggable on desktop, drift with the mouse (decorative) -->
+        <div class="scraps" aria-hidden="true">
+          <span class="scrap scrap--photo" data-depth="26" style="--sx:-38vw; --sy:-30vh; --r:-7deg">
+            <img src="assets/images/hero.webp" alt="" width="1062" height="855" draggable="false">
+            <i class="mono">mood board, mid-idea</i>
+          </span>
+          <span class="scrap scrap--card" data-depth="14" style="--sx:-20vw; --sy:-45vh; --r:5deg">
+            <svg><use href="#logo"/></svg>
+            <b>MS.FITS MEDIA</b>
+            <i class="mono">creatives at heart</i>
+          </span>
+          <span class="scrap scrap--note" data-depth="34" style="--sx:30vw; --sy:-42vh; --r:6deg">
+            <i class="mono">idea → strategy →<br>launch ✓</i>
+          </span>
+          <span class="scrap scrap--post" data-depth="20" style="--sx:36vw; --sy:30vh; --r:-6deg">
+            <svg><use href="#spark"/></svg>
+            <b>Story-<br>driven.</b>
+          </span>
+          <span class="scrap scrap--sticker" data-depth="40" style="--sx:-10vw; --sy:40vh; --r:12deg">
+            <svg><use href="#spark"/></svg>
+          </span>
+        </div>
+
+        <!-- Rotating badge -->
+        <div class="badge" aria-hidden="true">
+          <svg class="badge__ring" viewBox="0 0 200 200">
+            <defs><path id="ring" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+            <text><textPath href="#ring" textLength="470" lengthAdjust="spacing">MS.FITS MEDIA ✦ MS.FITS MEDIA ✦ MS.FITS MEDIA ✦</textPath></text>
+          </svg>
+          <svg class="badge__logo"><use href="#logo"/></svg>
+        </div>
+
+        <div class="hero__bottom">
+          <h1 class="hero__title" id="hero-title">
+            <span>Creatives at heart.</span>
+            <span>Strategic by design.</span>
+          </h1>
+          <div class="hero__row">
+            <p class="hero__sub">Branding, content, campaigns and social-first ideas, built on purposeful strategy.</p>
+            <div class="hero__btns">
+              <a class="btn btn--accent" href="#services">See what we do <span aria-hidden="true">↓</span></a>
+              <a class="btn btn--line" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Brand bar (static) -->
+    <div class="ticker">
+      <p class="ticker__line">
+        <span>Strategy-led</span><span class="ticker__sep" aria-hidden="true">✦</span>
+        <span>Story-driven</span><span class="ticker__sep" aria-hidden="true">✦</span>
+        <span>Social-first</span>
+      </p>
+    </div>
+
+    <!-- =========================================================
+         ABOUT
+         ========================================================= -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <p class="label mono" data-reveal>About</p>
+      <h2 class="big" id="about-title" data-reveal>Two creative minds. <mark>One shared vision.</mark></h2>
+
+      <div class="about__grid">
+        <figure class="polaroid" data-reveal>
+          <img src="assets/images/hero.webp" alt="Two women pinning ideas and colour swatches to a studio mood board" width="1062" height="855" loading="lazy">
+          <figcaption class="mono">the mood board, mid-idea</figcaption>
+        </figure>
+
+        <div class="about__copy" data-reveal style="--d: 120ms">
+          <p>
+            MS.FITS MEDIA was born from a shared love for creativity, storytelling and ideas that make an impact.
+            Founded by two best friends, we bring together creative instinct and purposeful strategy to help brands
+            find their voice, tell their stories and stand out meaningfully.
+          </p>
+          <blockquote class="quote">
+            <p>Good creativity makes people <mark>look.</mark> Great strategy makes them <mark>remember.</mark></p>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- ===== Work we've done (real results; numbers count up on scroll) ===== -->
+      <div class="work" id="work" aria-labelledby="work-title">
+        <p class="label mono" data-reveal>Already done</p>
+        <h3 class="work__title" id="work-title" data-reveal>Work we’re <mark>proud of.</mark></h3>
+
+        <div class="work__grid">
+
+          <!-- left: The Common House card, with its posts arranged as a flower underneath -->
+          <div class="work__col">
+          <article class="case case--dark" data-reveal>
+            <p class="case__type mono">Co-living · Brand launch</p>
+            <h4 class="case__name">The Common House</h4>
+            <ul class="case__stats">
+              <li><strong data-count="80" data-suffix="K+">80K+</strong><span>organic views in the brand’s first two months</span></li>
+              <li><strong>2<small> months</small></strong><span>from launch to an established digital presence</span></li>
+            </ul>
+            <p class="built__label mono">What we built</p>
+            <ul class="built">
+              <li class="is-hot">Logo &amp; name</li>
+              <li>Tagline</li>
+              <li>Visual identity</li>
+              <li class="is-hot">Culture</li>
+              <li>Brand positioning</li>
+              <li>Instagram content</li>
+              <li class="is-hot">Engagement campaigns</li>
+            </ul>
+            <p class="case__tags mono">Identity · Content</p>
+          </article>
+
+          </div>
+
+          <!-- right: K6 card, then the links -->
+          <div class="work__col work__col--right">
+          <article class="case case--accent" data-reveal style="--d: 120ms">
+            <p class="case__type mono">Fitness studio · Growth</p>
+            <h4 class="case__name">K6 Fitness Studios</h4>
+            <ul class="case__stats">
+              <li><strong data-count="20" data-suffix="+">20+</strong><span>monthly memberships from Meta ad campaigns</span></li>
+              <li><strong>₹2<small> lakh+</small></strong><span>in revenue from those memberships</span></li>
+              <li><strong data-count="800" data-suffix="K+">800K+</strong><span>organic views in three months</span></li>
+              <li><strong data-count="500" data-suffix="+">500+</strong><span>new organic followers</span></li>
+            </ul>
+            <p class="case__tags mono">Growth · Content</p>
+          </article>
+
+          </div>
+
+        </div>
+
+        <p class="work__hint mono" aria-hidden="true">Tap to open</p>
+        <ul class="flower" data-reveal aria-label="The Common House Instagram posts">
+        <li class="flower__item flower__item--1"><button class="gallery__item" type="button" data-full="assets/images/work/common-house-2.webp" aria-label="Open post 2 of 5 full size">
+              <img src="assets/images/work/common-house-2.webp" alt="Instagram post: “What makes The Common House a top pick in Viman Nagar”, showing a chat answer naming it the best PG in Viman Nagar, Pune" width="864" height="1080" loading="lazy">
+            </button></li>
+        <li class="flower__item flower__item--2"><button class="gallery__item" type="button" data-full="assets/images/work/common-house-4.webp" aria-label="Open post 4 of 5 full size">
+              <img src="assets/images/work/common-house-4.webp" alt="Instagram post: “What does The Common House have to offer”, listing amenities like a gym, AC rooms, laundry, Wi-Fi and three meals a day" width="864" height="1080" loading="lazy">
+            </button></li>
+        <li class="flower__item flower__item--center"><button class="gallery__item" type="button" data-full="assets/images/work/common-house-1.webp" aria-label="Open post 1 of 5 full size">
+              <img src="assets/images/work/common-house-1.webp" alt="Instagram post: “Hey, we’re ChatGPT approved” campaign cover for The Common House" width="864" height="1080" loading="lazy">
+            </button></li>
+        <li class="flower__item flower__item--4"><button class="gallery__item" type="button" data-full="assets/images/work/common-house-3.webp" aria-label="Open post 3 of 5 full size">
+              <img src="assets/images/work/common-house-3.webp" alt="Instagram post: “Where can I find The Common House”, showing its location in Sakore Nagar, Viman Nagar, 200 metres from Symbiosis" width="864" height="1080" loading="lazy">
+            </button></li>
+        <li class="flower__item flower__item--5"><button class="gallery__item" type="button" data-full="assets/images/work/common-house-5.webp" aria-label="Open post 5 of 5 full size">
+              <img src="assets/images/work/common-house-5.webp" alt="Instagram post: “What food does The Common House serve”, describing three home-style meals a day" width="864" height="1080" loading="lazy">
+            </button></li>
+        </ul>
+
+          <h4 class="work__reels-title mono" data-reveal id="reels">Watch the reels</h4>
+        <!-- Reels we've made: play silently when in view; the button turns sound on -->
+          <div class="reels" data-reveal>
+            <figure class="reel">
+              <div class="reel__frame">
+                <video class="reel__video" src="assets/video/common-house.mp4" poster="assets/video/common-house.jpg" muted loop playsinline preload="none" aria-label="The Common House reel: a student shows the PG, two minutes from campus"></video>
+                <button class="reel__sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="reel__speaker" d="M4 9h4l5-4v14l-5-4H4z"/><path class="reel__waves" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10"/><path class="reel__mute" d="M16 9l5 6M21 9l-5 6"/></svg>
+                </button>
+              </div>
+              <figcaption class="mono">The Common House</figcaption>
+            </figure>
+            <figure class="reel">
+              <div class="reel__frame">
+                <video class="reel__video" src="assets/video/k6-fitness-1.mp4" poster="assets/video/k6-fitness-1.jpg" muted loop playsinline preload="none" aria-label="K6 Fitness Studios reel: a tour of the gym, trainers and the student offer"></video>
+                <button class="reel__sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="reel__speaker" d="M4 9h4l5-4v14l-5-4H4z"/><path class="reel__waves" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10"/><path class="reel__mute" d="M16 9l5 6M21 9l-5 6"/></svg>
+                </button>
+              </div>
+              <figcaption class="mono">K6 Fitness Studios</figcaption>
+            </figure>
+            <figure class="reel">
+              <div class="reel__frame">
+                <video class="reel__video" src="assets/video/k6-fitness-2.mp4" poster="assets/video/k6-fitness-2.jpg" muted loop playsinline preload="none" aria-label="K6 Fitness Studios reel: why people in Viman Nagar choose K6"></video>
+                <button class="reel__sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="reel__speaker" d="M4 9h4l5-4v14l-5-4H4z"/><path class="reel__waves" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10"/><path class="reel__mute" d="M16 9l5 6M21 9l-5 6"/></svg>
+                </button>
+              </div>
+              <figcaption class="mono">K6 Fitness Studios</figcaption>
+            </figure>
+          </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVICES
+         ========================================================= -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <p class="label mono" data-reveal>What we do</p>
+      <h2 class="big" id="services-title" data-reveal>What do you need?</h2>
+
+      <ol class="svc">
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Content</h3>
+            <p class="svc__tag mono">Ideas worth sharing.</p>
+          </div>
+          <p class="svc__desc">Content strategy and planning, social media management, copywriting, reels, visual content and content calendars.</p>
+        </li>
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Identity</h3>
+            <p class="svc__tag mono">Brands with a point of view.</p>
+          </div>
+          <p class="svc__desc">Brand identity, visual direction, brand voice, messaging, storytelling and campaign creative direction.</p>
+        </li>
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Growth</h3>
+            <p class="svc__tag mono">Creativity that moves the needle.</p>
+          </div>
+          <p class="svc__desc">Performance marketing, paid social campaigns, campaign planning, audience targeting and optimisation.</p>
+        </li>
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Influence</h3>
+            <p class="svc__tag mono">Connections that mean something.</p>
+          </div>
+          <p class="svc__desc">Influencer and UGC marketing, creator discovery, outreach, coordination, campaign execution and reporting.</p>
+        </li>
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Experiences</h3>
+            <p class="svc__tag mono">Ideas brought to life.</p>
+          </div>
+          <p class="svc__desc">Conceptualisation and creative direction for brand activations, launch moments and memorable audience experiences.</p>
+        </li>
+        <li class="svc__row" data-reveal>
+          <div class="svc__main">
+            <h3 class="svc__name">Websites</h3>
+            <p class="svc__tag mono">Sites that look like you.</p>
+          </div>
+          <p class="svc__desc">Website design and build around your brand. Site structure, visual design, copywriting, and development, so your site looks like you. Works on every screen. And gives people a clear reason to get in touch.</p>
+        </li>
+        <li class="svc__row svc__row--cta" data-reveal>
+          <a class="svc__name svc__link" href="#contact">Not sure yet? Tell us about it <span aria-hidden="true">↗</span></a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- =========================================================
+         EVERYWHERE YOUR BRAND SHOWS UP
+         ========================================================= -->
+    <section class="section everywhere" id="feed" aria-labelledby="everywhere-title">
+      <p class="label mono" data-reveal>Everywhere</p>
+      <h2 class="big" id="everywhere-title" data-reveal>From the feed <mark>to the real world.</mark></h2>
+      <div class="feed-grid">
+        <ul class="chips" data-reveal>
+        <li style="--r:-4deg">Posts</li>
+        <li style="--r:3deg">Reels</li>
+        <li style="--r:-2deg">Stories</li>
+        <li style="--r:5deg">Captions</li>
+        <li style="--r:-6deg">Content calendars</li>
+        <li style="--r:2deg">Brand identity</li>
+        <li style="--r:-3deg">Brand voice</li>
+        <li style="--r:4deg">Campaigns</li>
+        <li style="--r:-5deg">Paid social</li>
+        <li style="--r:3deg">Creator collabs</li>
+        <li style="--r:-2deg">UGC</li>
+        <li style="--r:6deg">Launch moments</li>
+        <li style="--r:-4deg">Brand activations</li>
+      </ul>
+
+      </div>
+    </section>
+
+    <!-- Big marquee band -->
+    <div class="band" aria-hidden="true">
+      <div class="band__track">
+        <span>Make it matter <svg><use href="#spark"/></svg> Make it matter <svg><use href="#spark"/></svg>&nbsp;</span>
+        <span>Make it matter <svg><use href="#spark"/></svg> Make it matter <svg><use href="#spark"/></svg>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         OUR APPROACH
+         ========================================================= -->
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <p class="label mono" data-reveal>How we work</p>
+      <h2 class="big" id="approach-title" data-reveal>Creativity, <mark>with a plan.</mark></h2>
+
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <h3 class="step__title">Discover</h3>
+          <p>We understand the brand, its goals, audience and opportunities.</p>
+        </li>
+        <li class="step" data-reveal style="--d: 100ms">
+          <h3 class="step__title">Strategise</h3>
+          <p>We turn insights into clear creative direction and actionable plans.</p>
+        </li>
+        <li class="step" data-reveal style="--d: 200ms">
+          <h3 class="step__title">Create</h3>
+          <p>We develop ideas, stories, visuals and campaigns with purpose.</p>
+        </li>
+        <li class="step" data-reveal style="--d: 300ms">
+          <h3 class="step__title">Grow</h3>
+          <p>We execute, learn, refine and build momentum.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- =========================================================
+         CONTACT / CLOSING CTA
+         ========================================================= -->
+    <section class="section cta" id="contact" aria-labelledby="contact-title">
+      <p class="label mono" data-reveal>Okay, your turn.</p>
+      <h2 class="cta__title" id="contact-title" data-reveal>Have a brand in mind? <span>Let’s make something happen.</span></h2>
+
+      <div class="cta__row" data-reveal>
+        <p class="cta__note">No forms. Just call us and tell us what we’re building.</p>
+        <div class="cta__btns">
+          <a class="btn btn--accent btn--big" href="tel:+919860000717" data-copy="+91 9860000717">+91 9860000717 <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--line btn--big" href="tel:+918851255690" data-copy="+91 8851255690">+91 8851255690 <span aria-hidden="true">↗</span></a>
+          <!-- EMAIL: add once confirmed, e.g.
+          <a class="btn btn--line btn--big" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a> -->
+          <!-- INSTAGRAM: add once confirmed, e.g.
+          <a class="btn btn--line btn--big" href="https://www.instagram.com/yourhandle/" rel="noopener">Instagram ↗</a> -->
+        </div>
+      </div>
+
+      <svg class="cta__spark" aria-hidden="true" focusable="false"><use href="#spark"/></svg>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <a class="brand brand--footer" href="#main" aria-label="MS.FITS MEDIA, back to top">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+        <span class="brand__name" aria-hidden="true">MS.FITS MEDIA</span>
+      </a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">What we do</a></li>
+          <li><a href="#approach">How we work</a></li>
+          <li><a href="#contact">Let’s talk</a></li>
+          <!-- Add Instagram / social links here once the profile URLs are confirmed -->
+        </ul>
+      </nav>
+    </div>
+    <p class="site-footer__big" aria-hidden="true">MS.FITS</p>
+    <div class="site-footer__bottom mono">
+      <span>© <span id="year">2026</span> MS.FITS MEDIA</span>
+      <span>Still here? Our number’s right up there ↑</span>
+    </div>
+  </footer>
+
+  <!-- Full-size view for the Instagram posts -->
+  <dialog class="lightbox" id="lightbox" aria-label="Post, full size">
+    <img class="lightbox__img" alt="">
+    <button class="lightbox__close" type="button" aria-label="Close">✕</button>
+  </dialog>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
