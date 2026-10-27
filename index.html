@@ -121,16 +121,26 @@
             <div class="feed">
               <div class="feed__track">
                 <div class="post post--cream"><span>Creatives<br>at heart.</span></div>
-                <div class="post post--photo"><img src="assets/images/hero.webp" alt="" width="1062" height="855"></div>
+                <div class="post post--photo"><img src="assets/images/team/laptop-teal.webp" alt="" width="760" height="950"></div>
                 <div class="post post--dark"><svg><use href="#spark"/></svg><span>Strategy-led.</span></div>
+                <div class="post post--photo"><img src="assets/images/team/founders-coral.webp" alt="" width="760" height="950"></div>
                 <div class="post post--paper"><span>Story-<br>driven.</span></div>
+                <div class="post post--photo"><img src="assets/images/team/sofa.webp" alt="" width="760" height="950"></div>
                 <div class="post post--accent"><span>Social-<br>first ✦</span></div>
+                <div class="post post--photo"><img src="assets/images/team/founders-teal.webp" alt="" width="760" height="950"></div>
+                <div class="post post--cream"><span>Make it<br>matter ✦</span></div>
+                <div class="post post--photo"><img src="assets/images/team/laptop-coral.webp" alt="" width="760" height="950"></div>
                 <!-- duplicate set for a seamless loop -->
                 <div class="post post--cream"><span>Creatives<br>at heart.</span></div>
-                <div class="post post--photo"><img src="assets/images/hero.webp" alt="" width="1062" height="855"></div>
+                <div class="post post--photo"><img src="assets/images/team/laptop-teal.webp" alt="" width="760" height="950"></div>
                 <div class="post post--dark"><svg><use href="#spark"/></svg><span>Strategy-led.</span></div>
+                <div class="post post--photo"><img src="assets/images/team/founders-coral.webp" alt="" width="760" height="950"></div>
                 <div class="post post--paper"><span>Story-<br>driven.</span></div>
+                <div class="post post--photo"><img src="assets/images/team/sofa.webp" alt="" width="760" height="950"></div>
                 <div class="post post--accent"><span>Social-<br>first ✦</span></div>
+                <div class="post post--photo"><img src="assets/images/team/founders-teal.webp" alt="" width="760" height="950"></div>
+                <div class="post post--cream"><span>Make it<br>matter ✦</span></div>
+                <div class="post post--photo"><img src="assets/images/team/laptop-coral.webp" alt="" width="760" height="950"></div>
               </div>
             </div>
           </div>
@@ -139,8 +149,16 @@
         <!-- Scraps: draggable on desktop, drift with the mouse (decorative) -->
         <div class="scraps" aria-hidden="true">
           <span class="scrap scrap--photo" data-depth="26" style="--sx:-38vw; --sy:-30vh; --r:-7deg">
-            <img src="assets/images/hero.webp" alt="" width="1062" height="855" draggable="false">
-            <i class="mono">mood board, mid-idea</i>
+            <img src="assets/images/team/founders-coral.webp" alt="" width="760" height="950" draggable="false">
+            <i class="mono">the two of us</i>
+          </span>
+          <span class="scrap scrap--photo scrap--photo2" data-depth="18" style="--sx:-10vw; --sy:-40vh; --r:6deg">
+            <img src="assets/images/team/laptop-teal.webp" alt="" width="760" height="950" draggable="false">
+            <i class="mono">work mode</i>
+          </span>
+          <span class="scrap scrap--photo scrap--photo2" data-depth="30" style="--sx:10vw; --sy:-40vh; --r:-5deg; --x:62%; --y:7%">
+            <img src="assets/images/team/sofa.webp" alt="" width="760" height="950" draggable="false">
+            <i class="mono">coffee &amp; calls</i>
           </span>
           <span class="scrap scrap--card" data-depth="14" style="--sx:-20vw; --sy:-45vh; --r:5deg">
             <svg><use href="#logo"/></svg>
@@ -202,10 +220,16 @@
       <h2 class="big" id="about-title" data-reveal>Two creative minds. <mark>One shared vision.</mark></h2>
 
       <div class="about__grid">
-        <figure class="polaroid" data-reveal>
-          <img src="assets/images/hero.webp" alt="Two women pinning ideas and colour swatches to a studio mood board" width="1062" height="855" loading="lazy">
-          <figcaption class="mono">the mood board, mid-idea</figcaption>
-        </figure>
+        <div class="about__photos" data-reveal>
+          <figure class="polaroid">
+            <img src="assets/images/team/founders-teal.webp" alt="The two MS.FITS MEDIA founders standing back to back, smiling" width="760" height="950" loading="lazy">
+            <figcaption class="mono">the two of us</figcaption>
+          </figure>
+          <figure class="polaroid polaroid--small">
+            <img src="assets/images/team/laptop-coral.webp" alt="The two founders looking at a laptop and phone together" width="760" height="950" loading="lazy">
+            <figcaption class="mono">work mode</figcaption>
+          </figure>
+        </div>
 
         <div class="about__copy" data-reveal style="--d: 120ms">
           <p>
@@ -442,8 +466,16 @@
          CONTACT / CLOSING CTA
          ========================================================= -->
     <section class="section cta" id="contact" aria-labelledby="contact-title">
-      <p class="label mono" data-reveal>Okay, your turn.</p>
-      <h2 class="cta__title" id="contact-title" data-reveal>Have a brand in mind? <span>Let’s make something happen.</span></h2>
+      <div class="cta__main">
+        <p class="label mono" data-reveal>Okay, your turn.</p>
+        <h2 class="cta__title" id="contact-title" data-reveal>Have a brand in mind? <span>Let’s make something happen.</span></h2>
+
+      </div>
+
+      <figure class="cta__photo" data-reveal style="--d: 120ms">
+        <img src="assets/images/team/sofa.webp" alt="The two founders on a sofa, one on a laptop and the other on a call" width="760" height="950" loading="lazy">
+        <svg class="cta__spark" aria-hidden="true" focusable="false"><use href="#spark"/></svg>
+      </figure>
 
       <div class="cta__row" data-reveal>
         <p class="cta__note">No forms. Just call us and tell us what we’re building.</p>
@@ -456,8 +488,6 @@
           <a class="btn btn--line btn--big" href="https://www.instagram.com/yourhandle/" rel="noopener">Instagram ↗</a> -->
         </div>
       </div>
-
-      <svg class="cta__spark" aria-hidden="true" focusable="false"><use href="#spark"/></svg>
     </section>
 
   </main>

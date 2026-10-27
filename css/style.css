@@ -325,7 +325,7 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
 .phone__bar span { margin-left: auto; font-size: 10px; letter-spacing: .1em; }
 
 .feed { flex: 1; overflow: hidden; }
-.feed__track { animation: feed 20s linear infinite; }
+.feed__track { animation: feed 44s linear infinite; }
 @keyframes feed { to { transform: translateY(-50%); } }
 
 .post {
@@ -341,7 +341,7 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   text-align: center;
   text-transform: uppercase;
 }
-.post img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 40%; }
+.post img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
 .post svg { width: 26%; height: auto; fill: var(--coral); margin-bottom: -18%; }
 .post--cream { color: var(--teal); background: var(--cream); }
 .post--dark { color: var(--paper); background: var(--teal); grid-template-rows: 1fr 1fr; }
@@ -361,7 +361,8 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   -webkit-user-select: none;
 }
 .scrap--photo { width: clamp(150px, 15vw, 230px); padding: 8px 8px 30px; }
-.scrap--photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% 40%; pointer-events: none; }
+.scrap--photo img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; pointer-events: none; }
+.scrap--photo2 { width: clamp(120px, 11vw, 170px); }
 .scrap--photo i { position: absolute; left: 10px; bottom: 9px; font-size: 10px; color: var(--ink); }
 .scrap--card {
   display: grid;
@@ -505,18 +506,31 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   gap: 48px;
   margin-top: clamp(48px, 7vw, 96px);
 }
-.polaroid {
+.about__photos {
+  position: relative;
   justify-self: center;
-  width: min(100%, 380px);
+  width: min(100%, 520px);
+  padding-bottom: clamp(80px, 28vw, 195px);   /* room for the second photo to hang below */
+}
+.polaroid {
+  width: min(100%, 442px);
   padding: 12px 12px 48px;
   background: var(--white);
   box-shadow: 0 24px 50px -24px rgba(19, 47, 45, .45);
   transform: rotate(-3deg);
   transition: transform .5s var(--out);
 }
-.polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 68% 40%; }
+.polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
 .polaroid figcaption { margin-top: 14px; font-size: 13px; text-align: center; }
-@media (hover: hover) { .polaroid:hover { transform: rotate(0deg) scale(1.02); } }
+.polaroid--small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(62%, 300px);
+  padding: 9px 9px 36px;
+  transform: rotate(5deg);
+}
+@media (hover: hover) { .polaroid:hover { transform: rotate(0deg) scale(1.02); z-index: 2; } }
 
 .about__copy > p {
   max-width: 40ch;
@@ -932,14 +946,28 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   margin-top: clamp(40px, 6vw, 72px);
 }
 .cta__note { font-family: var(--mono); font-size: 14px; }
-@media (min-width: 900px) and (hover: hover) and (pointer: fine) { .cta__row { justify-content: end; } }
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .cta { display: grid; grid-template-columns: minmax(0, 1fr) min(38vw, 580px); align-items: center; gap: clamp(32px, 5vw, 80px); }
+  .cta__photo { width: 100%; margin: 0; }
+  .cta__row { grid-column: 1 / -1; justify-content: end; margin-top: 0; }   /* phone numbers along the far right, under both columns */
+}
 .cta__btns { display: flex; flex-wrap: wrap; gap: 14px; }
+.cta__photo {
+  position: relative;
+  width: min(92%, 440px);
+  margin: clamp(48px, 8vw, 72px) auto 0;
+  padding: 10px 10px 10px;
+  background: var(--white);
+  box-shadow: 0 24px 50px -24px rgba(0, 0, 0, .6);
+  rotate: -3deg;
+}
+.cta__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; }
 .cta__spark {
   position: absolute;
-  top: clamp(60px, 12vh, 140px);
-  right: var(--m);
-  width: clamp(70px, 11vw, 190px);
-  height: clamp(70px, 11vw, 190px);
+  top: -34px;
+  right: -30px;
+  width: clamp(64px, 9vw, 100px);
+  height: clamp(64px, 9vw, 100px);
   fill: var(--coral);
   animation: twinkle 4s ease-in-out infinite;
 }
@@ -1108,6 +1136,7 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   }
   .scrap.is-dragging { cursor: grabbing; z-index: 5; }
   .scrap--photo   { --x: 6%;  --y: 24%; }
+  .scrap--photo2  { --x: 27%; --y: 8%; }
   .scrap--card    { --x: 24%; --y: 31%; }
   .scrap--note    { --x: 83%; --y: 15%; }
   .scrap--post    { --x: 84%; --y: 50%; }
@@ -1148,8 +1177,8 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   .case--dark { rotate: -1.2deg; }
   .case--accent  { rotate: 1.2deg; }
   @media (hover: hover) { .case:hover { rotate: 0deg; } }
-  .about__grid { grid-template-columns: 5fr 7fr; align-items: center; gap: clamp(48px, 7vw, 120px); }
-  .polaroid { justify-self: start; }
+  .about__grid { grid-template-columns: 6fr 6fr; align-items: center; gap: clamp(48px, 7vw, 120px); }
+  .about__photos { justify-self: start; }
 
   .svc__row {
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
