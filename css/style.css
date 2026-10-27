@@ -514,7 +514,7 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
 }
 .polaroid {
   width: min(100%, 442px);
-  padding: 12px 12px 48px;
+  padding: 12px;
   background: var(--white);
   box-shadow: 0 24px 50px -24px rgba(19, 47, 45, .45);
   transform: rotate(-3deg);
@@ -527,7 +527,7 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   right: 0;
   bottom: 0;
   width: min(62%, 300px);
-  padding: 9px 9px 36px;
+  padding: 9px;
   transform: rotate(5deg);
 }
 @media (hover: hover) { .polaroid:hover { transform: rotate(0deg) scale(1.02); z-index: 2; } }
