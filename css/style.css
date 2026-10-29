@@ -362,7 +362,6 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
 }
 .scrap--photo { width: clamp(150px, 15vw, 230px); padding: 8px 8px 30px; }
 .scrap--photo img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; pointer-events: none; }
-.scrap--photo2 { width: clamp(120px, 11vw, 170px); }
 .scrap--photo i { position: absolute; left: 10px; bottom: 9px; font-size: 10px; color: var(--ink); }
 .scrap--card {
   display: grid;
@@ -1136,7 +1135,6 @@ html:not(.js) .nav-panel { position: static; visibility: visible; opacity: 1; tr
   }
   .scrap.is-dragging { cursor: grabbing; z-index: 5; }
   .scrap--photo   { --x: 6%;  --y: 24%; }
-  .scrap--photo2  { --x: 27%; --y: 8%; }
   .scrap--card    { --x: 24%; --y: 31%; }
   .scrap--note    { --x: 83%; --y: 15%; }
   .scrap--post    { --x: 84%; --y: 50%; }
